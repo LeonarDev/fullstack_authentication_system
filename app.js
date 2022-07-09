@@ -45,7 +45,7 @@ app.post("/register", (request, response) => {
     .catch((e) => {
       response.status(500).send({
         message: "Password was not hashed successfully",
-        e,
+        e: e.message,
       });
     });
 });
